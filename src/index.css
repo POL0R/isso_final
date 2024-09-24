@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.scoreboardHolder {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2vw;
+}
+.grouperName {
+  margin-left: 20%;
+  color: #0f171f;
+  font-size: 3vw;
+}
+
+.leaderboardHolder {
+  width: 78%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.navbarHolder {
+  
+  position: fixed;
+  padding-top: 2vw;
+  width: 20%;
+  height: 97vh;
+  background-color: aliceblue;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  background-color: #0f171f;
+
+}
+
+.mainApp {
+  display: flex;
+}
+
+.scoreboardDisplay {
+  height: 30vw;
+  position: relative;
+  width: 70%;
+  margin-left: 25%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  transition: all ease-in-out 0.5s;
+  margin-bottom: 2vw;
+  
+}
+
+.status {
+  height: 15%;
+  margin-top: 1vw;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 1vw;
+  margin-left: 2vw;
+}
+
+.teamAndScore {
+  height: 65%;
+}
+
+.name {
+  position: relative;
+  height: 20%;
+  top: -10%;
+  color: #0f171f;
+}
+
+.statusText {
+  font-size: 1.4vw;
+}
+
+.teamAndScore {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.circle {
+  height: 17vw;
+  width: 17vw;
+  background-color: transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 1s;
+  position: relative;
+}
+
+.jersey {
+  position: absolute;
+  z-index: -1;
+}
+
+.scorebordImg {
+  z-index: -1;
+}
+
+.name {
+  font-family: Oswald;
+  font-size: 2vw;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 8vw;
+  margin-right: 8.5vw;
+  transition: all 0.5s ease-in-out;
+}
+
+.scoreText {
+  font-size: 6vw;
+}
+
+.imgTeamCircle {
+  width: 17vw;
+  height: 17vw;
+  position: absolute;
+}
+
+.topHolder {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 4vw;
+  background: 
+  linear-gradient(#a2a0a095 0 0) bottom /95% 3px no-repeat, 
+  #ffffff00;
+}
+
+.leaderboard {
+  margin-top: 1vw;
+  width: 90%;
+  border: 2px solid #c3c3c3c9;
+  border-radius: 15px;
+  margin-left: 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.spacerLeaderboard {
+  width: 40%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tableLeader {
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.tableNumber {
+  margin-left: 1.7vw;
+  margin-right: 2.5vw;
+}
+
+.leaderboardTeams {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  background: 
+  linear-gradient(#d7d3d342 0 0) bottom /95% 3px no-repeat, 
+  #ffffff00;
+}
+
+.leaderboardTeam {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4vw;
+  width: 100%;
+  border-bottom: 1px solid #c3c3c3c9;
+  transition: 0.2s all ease-in;
+}
+
+.leaderboardTeam:hover {
+  background-color: #4b9ad745;
+}
+
+.leaderBoardImgP {
+  width: 4vw;
+  height: 4vw;
+}
+
+.topMakerSpace {
+  margin-top: 3vw;
+}
+.bottomMakerSpace {
+  margin-bottom: 1vw;
+}
+
+.topDateScroll {
+  z-index: 2;
+  height: 5vw;
+  gap: 1.5vw;
+  overflow-x: scroll;
+  margin-left: 25%;
+  margin-bottom: 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.buttoner {
+  width: 10vw;
+  height: 4vw;
+  
+}
+
+.topDateHeader {
+  color: #0f171f;
+}
+
+.dateButton {
+  padding: 10px;
+  background-color: #0b3754;
+  color: white;
+  border: none;
+  width: 13vw;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+  border-radius: 40px;
+  font-size: 1.2vw;
+  font-weight: 500;
+}
+
+.dateButton:hover {
+  background-color: rgba(16, 97, 137, 0.852); 
+  border: 2px solid rgb(0, 152, 223);
+}
+
+.dateButton.selected {
+  background-color: rgb(70, 173, 224); 
+  color: white; 
+}
+
+.flexer {
+  position: relative;
+  height: 100%;
+  background-image: url('footballFieldcopy.webp');
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  border: 2px solid #c3c3c3c9;
+}
+
+.imgTeamCircle {
+  top: 15%;
+
+  transition: 0.5s ease-in all;
+}
+
+.imgTeamCircle1 {
+  left: 5%;
+}
+
+.imgTeamCircle2 {
+  right: 5%;
+}
+
+.scoreboardDisplay:hover .flexer{
+  box-shadow: rgba(51, 117, 231, 0.25) 0px 34px 25px, rgba(87, 63, 243, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  transform: perspective(1200px) translateY(-5%) rotateX(10deg) translateZ(0);
+}
+
+.scoreboardDisplay:hover .name {
+  text-shadow: rgb(255, 255, 255) 0px 0px 15px;
+}
+
+.buttonNavbar {
+  height: 5.2vw;
+  padding-left: 2vw;
+  width: 20vw;
+  margin-top: 1vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-style: none;
+  font-size: 1.4vw;
+  font-family: 'Oswald';
+  gap: 1vw;
+  background-color: transparent;
+  border: none;
+  color: white;
+  transition: 0.2s ease-in all;
+  text-decoration: none;
+}
+
+.buttonNavbar:hover {
+  cursor: pointer;
+  background-color: #6fa1c3;
+}
+
+.MdScoreboard {
+  font-size: 4vw;
+  left: 10%;
+  text-decoration: none;
+}
+
+.topLogo {
+  width: 9vw ;
+}
+
+.displayNavbarFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 2vw;
+  width: 100%;
+}
+
+.okGa {
+  text-decoration: none;
+}
+
+.mainer {
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.lastNavbar {
+  font-size: 1vw;
+  margin-bottom: 1vw;
+  margin-left: 2vw;
+  color: white;
+  font-weight: 400;
+}
+
+.spannerNavbar {
+  text-decoration: none;
+}
+
+.loadingHolder {
+  background-color: rgb(18, 18, 18);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.intialLogo {
+  position: absolute;
+}
+
+
+
+.loading_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #080707;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+
+
+#loader_logger {
+  position: absolute;
+  z-index: 2;
+}
